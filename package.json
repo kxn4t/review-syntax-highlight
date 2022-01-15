@@ -1,0 +1,31 @@
+{
+    "name": "re-view-syntax-highlight",
+    "displayName": "Re:VIEW Syntax Highlight",
+    "description": "Syntax Highlights for Re:VIEW",
+    "publisher": "kxn4t",
+    "version": "0.0.1",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "main": "./extension.js",
+    "activationEvents": [
+        "onLanguage:review"
+    ],
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "review",
+            "aliases": ["Re:VIEW", "review"],
+            "extensions": [".re"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "review",
+            "scopeName": "source.re",
+            "path": "./syntaxes/review.tmLanguage.json"
+        }]
+    }
+}
